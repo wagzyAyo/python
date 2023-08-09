@@ -1,14 +1,9 @@
-#!/usr/bin/python3
-def fizzbuzz():
-    for numbers in range(1, 100):
-        if numbers % 3 == 0:
-            print("Fizz ", end="")
-        elif numbers % 5 == 0:
-            print("Buzz ", end="")
-        elif numbers % 3 == 0 and numbers % 5 == 0:
-            print("FizzBuzz ", end="")
-        else:
-            print("{} ".format(numbers), end="")
-
-
-fizzbuzz()
+# Welcome users
+print("Hi welcome to band name suggestion matrix")
+# Prompt the user to enter the city they grow up in
+city = input("Which city did you grow up? \n")
+# Prompt the user to enter the name of their pet
+pet = input("What is the name of your pet?\n")
+# print out suggested names for the users
+print("Your band name could be " + city + " " + pet)
+# prompt should be entered in new line from the question
