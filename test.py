@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-def uppercase(str):
-    for i in str:
-        if ord(i) >= 97 and ord(i) <= 122:
-            i = chr(ord(i) - 32)
-        print("{}".format(i), end="")
-    print()
+def fizzbuzz():
+    for numbers in range(1, 100):
+        if numbers % 3 == 0:
+            print("Fizz ", end="")
+        elif numbers % 5 == 0:
+            print("Buzz ", end="")
+        elif numbers % 3 == 0 and numbers % 5 == 0:
+            print("FizzBuzz ", end="")
+        else:
+            print("{} ".format(numbers), end="")
+
+
+fizzbuzz()
