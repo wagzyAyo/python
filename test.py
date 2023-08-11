@@ -1,9 +1,13 @@
-# Welcome users
-print("Hi welcome to band name suggestion matrix")
-# Prompt the user to enter the city they grow up in
-city = input("Which city did you grow up? \n")
-# Prompt the user to enter the name of their pet
-pet = input("What is the name of your pet?\n")
-# print out suggested names for the users
-print("Your band name could be " + city + " " + pet)
-# prompt should be entered in new line from the question
+#!/usr/bin/python3
+if __name__ == "__main__":
+    import sys
+
+    length = len(sys.argv)
+    if length == 0:
+        print("0 arguments.")
+    elif length == 1:
+        print("1: argument:")
+    else:
+        print("{} arguments:".format(length))
+    for x in range(length):
+        print("{}: {}".format(x, sys.argv[x]))
