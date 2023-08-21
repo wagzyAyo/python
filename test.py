@@ -1,13 +1,34 @@
-#!/usr/bin/python3
-if __name__ == "__main__":
-    import sys
+import random
+from hangman_words import word_list
+from hangman import logo, stages
 
-    length = len(sys.argv)
-    if length == 0:
-        print("0 arguments.")
-    elif length == 1:
-        print("1: argument:")
-    else:
-        print("{} arguments:".format(length))
-    for x in range(length):
-        print("{}: {}".format(x, sys.argv[x]))
+chosen_word = random.choice(word_list)
+chance = []
+for x in chosen_word:
+    chance += "_"
+lives = 6
+end_of_game = False
+print(logo)
+while end_of_game == False:
+    guess = input("Guess a letter: ")
+    guess = guess.lower()
+
+    if guess in chance:
+        print(f"You alraedy guessed {guess}")
+
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            chance[position] = letter
+    print(chance)
+    print(stages[lives])
+    if guess not in chosen_word:
+        print(f"You guess {guess},Not in the chosen world, you loose a life")
+        lives -= 1
+        if lives == 0:
+            end_of_game = True
+            print("you lose!")
+
+    if "_" not in chance:
+        end_of_game = True
+        print("You Win!")
