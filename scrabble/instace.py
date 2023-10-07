@@ -1,24 +1,32 @@
+SCORE = 0
+
 
 class Scrabble():
-    guess = set()  # Make sure each word is only stored once
+    guess = []  # Make sure each word is only stored once
 
     def __init__(self, word):
         self.word = word
-        print(f"Unscrable this word {self.word}")
+        self.word_list = list(word)
+        print(f"Unscrable this word {self.word_list}")
+        print(Scrabble.guess)
 
     def answer(self, ans):
+        global SCORE
 
-        if ans in self.word:
+        if set(ans) <= set(self.word_list):
             if ans not in Scrabble.guess:
                 print("Correct!")
-                self.score(answer=ans)
                 Scrabble.guess.append(ans)
+                print(f"Your score is {self.score(ans)}")
             else:
                 print("Word already guessed")
-            print(f"Your score: {self.score(ans)}")
+        else:
+            print("word does not match the given letters")
+
+        print(SCORE)
 
     def score(self, answer):
-        self.score = 0
+        global SCORE
         score_point = len(answer)
-        self.score += score_point
-        return self.score
+        SCORE += score_point
+        return SCORE
