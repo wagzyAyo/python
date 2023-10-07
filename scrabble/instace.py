@@ -6,9 +6,7 @@ class Scrabble():
 
     def __init__(self, word):
         self.word = word
-        print(f"Unscrable this word {self.word}")
-        guess_ans = input("your guess word ? ")
-        self.answer(guess_ans)
+        print(f"Unscrable this word {self.word} You only have 5 chances")
         print(Scrabble.score)
 
     def answer(self, ans):
