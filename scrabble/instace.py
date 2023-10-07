@@ -13,7 +13,7 @@ class Scrabble():
     def answer(self, ans):
         global SCORE
 
-        if set(ans) <= set(self.word_list):
+        if all(ans.count(letter) <= self.word_list.count(letter) for letter in ans):
             if ans not in Scrabble.guess:
                 print("Correct!")
                 Scrabble.guess.append(ans)
