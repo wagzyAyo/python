@@ -6,11 +6,12 @@ class Scrabble():
 
     def __init__(self, word):
         self.word = word
-        print(f"Unscrable this word {self.word} You only have 5 chances")
-        print(Scrabble.score)
+        print(f"Unscrable this word {self.word}")
+        print("You only have 5 chances")
+        print(f"Your score: {Scrabble.score}")
 
     def answer(self, ans):
-        if ans == self.word:
+        if ans in self.word:
             if ans not in Scrabble.guess:
                 print("Correct!")
                 self.score(answer=ans)
@@ -19,6 +20,5 @@ class Scrabble():
                 print("Word already guessed")
 
     def score(self, answer):
-        score = len(answer)
-        Scrabble.score += score
-        print(self.score)
+        score_point = len(answer)
+        Scrabble.score += score_point

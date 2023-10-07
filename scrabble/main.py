@@ -10,17 +10,22 @@ for word in Words:
 game_on = True
 guess = 0
 
-while game_on:
-    def game(opt):
-        word_to_guess = random.choice(scrabbled_words)
 
-        while opt <= 4:
-            scrabble = Scrabble(word_to_guess)
-            guess_ans = input("your guess word ? ")
-            scrabble.answer(guess_ans)
-            opt += 1
+def game(opt):
+    word_to_guess = random.choice(scrabbled_words)
+
+    while opt <= 4:
+        scrabble = Scrabble(word_to_guess)
+        guess_ans = input("your guess word ? ")
+        scrabble.answer(guess_ans)
+        opt += 1
+
+
+while game_on:
+    game(guess)
+
     game_cont = input('want to continue? Y or N ')
-    if game_cont == "Y":
+    if game_cont == "Y" or game_cont == "y":
         game(guess)
-    if game_cont == "N":
+    if game_cont == "N" or game_cont == "n":
         game_on = False
