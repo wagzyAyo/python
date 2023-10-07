@@ -2,12 +2,14 @@
 
 class Scrabble():
     guess = []
+    score = 0
 
     def __init__(self, word):
         self.word = word
         print(f"Unscrable this word {self.word}")
-        ans = input("your guess word ? ")
-        self.score = 0
+        guess_ans = input("your guess word ? ")
+        self.answer(guess_ans)
+        print(Scrabble.score)
 
     def answer(self, ans):
         if ans == self.word:
@@ -20,5 +22,5 @@ class Scrabble():
 
     def score(self, answer):
         score = len(answer)
-        self.score += score
+        Scrabble.score += score
         print(self.score)
