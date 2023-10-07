@@ -1,7 +1,7 @@
 
 
 class Scrabble():
-    guess = []
+    guess = set()  # Make sure each word is only stored once
     score = 0
 
     def __init__(self, word):
