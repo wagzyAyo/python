@@ -13,6 +13,7 @@ guess = 0
 
 def game(opt):
     word_to_guess = random.choice(scrabbled_words)
+    print("You only have 5 chances")
 
     while opt <= 4:
         scrabble = Scrabble(word_to_guess)
