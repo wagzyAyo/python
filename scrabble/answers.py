@@ -1,4 +1,4 @@
-words = {
+words_answers = {
     "iparmte": {
         "matier",
         "maitre",
