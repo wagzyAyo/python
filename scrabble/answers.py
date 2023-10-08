@@ -42,7 +42,8 @@ words_answers = {
         "to",
         "scot",
         "blast",
-        "cobalt"
+        "cobalt",
+        "boat"
     },
     "ysgomnui": {
         "gynoiums",

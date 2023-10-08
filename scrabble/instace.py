@@ -18,7 +18,7 @@ class Scrabble():
         if ans in Scrabble.guess:
             print("Word already guessed")
 
-        elif set(ans) <= set(self.word_list):
+        elif set(ans) <= set(self.word_list) and ans in words_answers[self.word]:
             print("Correct!")
             Scrabble.guess.add(ans)
             print(f"Your score is {self.score(ans)}")
