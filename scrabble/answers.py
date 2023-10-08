@@ -21,38 +21,88 @@ words = {
         "prate"
     },
     "tceubmir": {
-        "brucetim"
+        "brucetim",
+        "met",
+        "metric",
+        "bruit",
+        "lither",
+        "relight"
     },
     "tgrilhe": {
         "lighter",
-        "reglith"
+        "reglith",
+        "he",
+        "tile",
+        "grit"
     },
     "tsboalc": {
-        "cobalts"
+        "cobalts",
+        "so",
+        "coal",
+        "to",
+        "scot",
+        "blast",
+        "cobalt"
     },
     "ysgomnui": {
-        "gynoiums"
+        "gynoiums",
+        "so",
+        "go",
+        "no",
+        "mousy",
+        "sing"
     },
     "renldaw": {
         " wrangled",
-        "leward"
+        "leward",
+        "draw",
+        "den",
+        "raw",
+        "wander",
+        "lander",
+        "drawn"
     },
     "ohtsimue": {
         "outscheme",
         "mouthies",
-        "eouthism"
+        "eouthism",
+        "so",
+        "to",
+        "sit",
+        "mute",
+        "set",
+        "moist",
+        "mouse",
+        "shout"
     },
     "ceblayke": {
         "lackey",
-        "blackeye"
+        "blackeye",
+        "lake",
+        "cake",
+        "clay",
+        "black",
+        "cable",
+        "cakey"
     },
     "dnuwlera": {
         "underlaw",
-        "launder"
+        "launder",
+        "era",
+        "law",
+        "war",
+        "raw",
+        "unwar",
+        "endwar"
     },
     "rgaine": {
         "regain",
-        "gainer"
+        "gainer",
+        "rain",
+        "gain",
+        "rag"
+        "range",
+        "grain"
     }
 
 }
