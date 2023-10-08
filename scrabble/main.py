@@ -27,6 +27,7 @@ while game_on:
 
     game_cont = input('want to continue? Y or N ')
     if game_cont == "Y" or game_cont == "y":
+        Scrabble.guess.clear()
         game(guess)
-    if game_cont == "N" or game_cont == "n":
+    elif game_cont == "N" or game_cont == "n":
         game_on = False

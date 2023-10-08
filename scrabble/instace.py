@@ -15,13 +15,13 @@ class Scrabble():
     def answer(self, ans):
         global SCORE
 
-        if all(ans.count(letter) <= self.word_list.count(letter) for letter in ans):
-            if ans not in Scrabble.guess and ans in words_answers[self.word]:
-                print("Correct!")
-                Scrabble.guess.append(ans)
-                print(f"Your score is {self.score(ans)}")
-            else:
-                print("Word already guessed")
+        if ans in Scrabble.guess:
+            print("Word already guessed")
+
+        elif set(ans) <= set(self.word_list):
+            print("Correct!")
+            Scrabble.guess.add(ans)
+            print(f"Your score is {self.score(ans)}")
         else:
             print("word does not match the given letters")
             Scrabble.incorrect_guess.add(ans)
