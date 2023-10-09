@@ -44,6 +44,10 @@ words_answers = {
         "blast",
         "cobalt",
         "boat"
+        "tab",
+        "cab",
+        "boast",
+        "last"
     },
     "ysgomnui": {
         "gynoiums",
@@ -51,7 +55,9 @@ words_answers = {
         "go",
         "no",
         "mousy",
-        "sing"
+        "sing",
+        "gun",
+        "sun"
     },
     "renldaw": {
         " wrangled",
@@ -61,7 +67,9 @@ words_answers = {
         "raw",
         "wander",
         "lander",
-        "drawn"
+        "drawn",
+        "lend",
+        "lawn"
     },
     "ohtsimue": {
         "outscheme",
