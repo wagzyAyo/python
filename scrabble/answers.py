@@ -18,7 +18,16 @@ words_answers = {
         "tripe",
         "ramie",
         "retap",
-        "prate"
+        "prate",
+        "tap",
+        "tape",
+        "ram",
+        "it",
+        "rat",
+        "part",
+        "mate",
+        "rap",
+        "tip"
     },
     "tceubmir": {
         "brucetim",
@@ -57,7 +66,13 @@ words_answers = {
         "mousy",
         "sing",
         "gun",
-        "sun"
+        "sun",
+        "you",
+        "son",
+        "sin",
+        "gin",
+        "in",
+        "sign"
     },
     "renldaw": {
         " wrangled",
@@ -102,7 +117,8 @@ words_answers = {
         "war",
         "raw",
         "unwar",
-        "endwar"
+        "endwar",
+        "near"
     },
     "rgaine": {
         "regain",

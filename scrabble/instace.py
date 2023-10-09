@@ -1,14 +1,14 @@
 from answers import words_answers
+import random
 SCORE = 0
 
 
 class Scrabble():
     guess = set()  # Make sure each word is only stored once
-    incorrect_guess = set()  # store incorrect guess
 
     def __init__(self, word):
         self.word = word
-        self.word_list = list(word)
+        self.word_list = list(self.word)
         print(f"Unscrable this word {self.word_list}")
         print(Scrabble.guess)
 
@@ -19,15 +19,18 @@ class Scrabble():
             print("Word already guessed")
 
         elif set(ans) <= set(self.word_list) and ans in words_answers[self.word]:
+
             print("Correct!")
+            print(f"You score {self.score(ans)}pts for your {ans} word")
             Scrabble.guess.add(ans)
-            print(f"Your score is {self.score(ans)}")
+            print(f"Your total score is {SCORE}")
         else:
             print("word does not match the given letters")
-            Scrabble.incorrect_guess.add(ans)
 
     def score(self, answer):
+        """This method calculate users score
+        and return user score points for each corrected guess"""
         global SCORE
         score_point = len(answer)
         SCORE += score_point
-        return SCORE
+        return score_point
