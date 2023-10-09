@@ -97,7 +97,12 @@ words_answers = {
         "set",
         "moist",
         "mouse",
-        "shout"
+        "shout",
+        "hot",
+        "shit",
+        "hit",
+        "it",
+        "mist"
     },
     "ceblayke": {
         "lackey",
@@ -118,7 +123,15 @@ words_answers = {
         "raw",
         "unwar",
         "endwar",
-        "near"
+        "near",
+        "nude",
+        "dear",
+        "read",
+        "den",
+        "nerd",
+        "wed",
+        "we",
+        "dew"
     },
     "rgaine": {
         "regain",
