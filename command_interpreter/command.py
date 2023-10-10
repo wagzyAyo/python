@@ -3,6 +3,8 @@ import cmd
 
 class Prompt(cmd.Cmd):
 
+    NAMES = ["Alice", "Ayo", "Ola", "Tobi"]
+
     def do_name(self, arg):
         """Set users name"""
         name = input("What is your name? ").title()
@@ -13,12 +15,12 @@ class Prompt(cmd.Cmd):
 
         return True
 
-    # def complete_name(self, text, arg, begidx, endidx):
-    #    """ Auto complete names """
+    def complete_name(self, text, arg, begidx, endidx):
+        """ Auto complete names """
 
-    #    if not text:
-    #       comp = self.NAMES[:]
-    #   else:
-    #        comp = [f for f in self.NAMES if f.startswith(text)]
+        if not text:
+            comp = self.NAMES[:]
+        else:
+            comp = [f for f in self.NAMES if f.startswith(text)]
 
-    #   return comp
+        return comp
