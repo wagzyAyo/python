@@ -25,9 +25,11 @@ class FileStorage():
 
     def reload(self):
         """deseializes json file to python object"""
-        if os.path.exists("file.json"):
+        if os.path.exists(self.__file_path):
             with open("file.json", mode='r') as file:
                 data = json.load(file)
-                return data
-        else:
-            pass
+                for key, value in data.items():
+                    class_name, obj_id = key.split(".")
+                    obj_data = value
+                    obj = eval(class_name)(**obj_data)
+                    self.__objects[key] = obj
