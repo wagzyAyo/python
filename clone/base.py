@@ -16,12 +16,13 @@ class BaseModel():
             self.updated_at = datetime.now()
 
         else:
+            date_format = "%Y-%m-%dT%H:%M:%S.%f"
             for key, value in kwargs.items():
+                if key == "created_at" or key == "updated_at":
+                    value = datetime.strptime(
+                        kwargs[key], date_format)
                 if key != "__class__":
-                    if key in ["created_at", "updated_at"]:
-                        value = datetime.strptime(key, "%Y-%m-%dT%H:%M:%S.%f")
-                    else:
-                        setattr(self, key, value,)
+                    setattr(self, key, value,)
 
     def save(self):
         """Update public attribute with the cuttent date time"""
@@ -29,7 +30,7 @@ class BaseModel():
 
     def to_dict(self):
         """create a dict """
-        dict_obj = self.__dict__
+        dict_obj = self.__dict__.copy()
         dict_obj["__class__"] = self.__class__.__name__
         dict_obj["created_at"] = self.created_at.isoformat()
         dict_obj["updated_at"] = self.updated_at.isoformat()
