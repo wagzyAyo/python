@@ -8,11 +8,20 @@ from datetime import datetime
 class BaseModel():
     """The Base model class"""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """initializing base model"""
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if not kwargs:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+
+        else:
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    if key in ["created_at", "updated_at"]:
+                        value = datetime.strptime(key, "%Y-%m-%dT%H:%M:%S.%f")
+                    else:
+                        setattr(self, key, value,)
 
     def save(self):
         """Update public attribute with the cuttent date time"""
