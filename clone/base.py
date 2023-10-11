@@ -3,6 +3,7 @@
 
 from uuid import uuid4
 from datetime import datetime
+from file import FileStorage as storage
 
 
 class BaseModel():
@@ -14,6 +15,7 @@ class BaseModel():
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
         else:
             date_format = "%Y-%m-%dT%H:%M:%S.%f"
@@ -27,6 +29,7 @@ class BaseModel():
     def save(self):
         """Update public attribute with the cuttent date time"""
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """create a dict """
