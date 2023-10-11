@@ -1,4 +1,5 @@
 import cmd
+from base import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
@@ -12,6 +13,18 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, arg):
         """close The console"""
         return True
+
+    def do_create(self, arg):
+        if not arg:
+            print("class name missing")
+
+        try:
+            class_name = arg
+            new_instance = eval(class_name)()
+            new_instance.save()
+            print(new_instance.id)
+        except NameError:
+            print("Class doesnt exist")
 
 
 if __name__ == "__main__":
