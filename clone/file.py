@@ -31,5 +31,5 @@ class FileStorage():
                 for key, value in data.items():
                     class_name, obj_id = key.split(".")
                     obj_data = value
-                    obj = eval(class_name)(**obj_data)
+                    obj = eval(class_name)(obj_data)
                     self.__objects[key] = obj
