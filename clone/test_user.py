@@ -35,3 +35,7 @@ class TestUser(unittest.TestCase):
         self.assertIsInstance(user.first_name, str)
         self.assertIsInstance(user.last_name, str)
         self.assertIsInstance(user.password, str)
+
+
+if __name__ == "__main__":
+    unittest.main()
