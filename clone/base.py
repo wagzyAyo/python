@@ -9,27 +9,15 @@ from __init__ import storage
 class BaseModel():
     """The Base model class"""
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self):
         """initializing base model"""
-        if not kwargs:
-            self.id = str(uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-            storage.new(self)
-
-        else:
-            date_format = "%Y-%m-%dT%H:%M:%S.%f"
-            for key, value in kwargs.items():
-                if key == "created_at" or key == "updated_at":
-                    value = datetime.strptime(
-                        kwargs[key], date_format)
-                if key != "__class__":
-                    setattr(self, key, value,)
+        self.id = str(uuid4())
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
 
     def save(self):
         """Update public attribute with the cuttent date time"""
         self.updated_at = datetime.now()
-        storage.save()
 
     def to_dict(self):
         """create a dict """
