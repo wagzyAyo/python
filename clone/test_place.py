@@ -23,6 +23,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(place.amenity_ids, [])
 
     def test_type(self):
+        """Check the type of each place attributes"""
         place = Place()
 
         self.assertIsInstance(place.city_id, str)
@@ -37,6 +38,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(place.amenity_ids, list)
 
     def test_attribute(self):
+        """Check if place has attributes"""
         place = Place()
         self.assertTrue(hasattr(place, "city_id"))
         self.assertTrue(hasattr(place, "user_id"))
@@ -48,3 +50,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(place, "price_by_night"))
         self.assertTrue(hasattr(place, "latitude"))
         self.assertTrue(hasattr(place, "amenity_ids"))
+
+
+if __name__ == "__main__":
+    unittest.main()
