@@ -3,6 +3,7 @@ from base import BaseModel
 
 
 class HBNBCommand(cmd.Cmd):
+    __classnames = ["BaseModel", "City", "Place"]
 
     prompt = "(hbnb) "
 
@@ -26,6 +27,15 @@ class HBNBCommand(cmd.Cmd):
             print(new_instance.id)
         except NameError:
             print("** class doesn't exist **")
+
+    def do_show(self, arg):
+        """Prints the string representation of an instance based on the class name and id"""
+        if len(arg) == 0:
+            print("** class name missing **")
+        elif arg[1] not in self.__classnames:
+            print("** class doesn't exist **")
+        elif len(arg) == 1:
+            print("** instance id missing **")
 
 
 if __name__ == "__main__":
