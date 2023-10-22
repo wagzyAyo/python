@@ -78,7 +78,10 @@ article h2 {
 .user {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+.user p {
+    margin-left: 20px;
 }
 
 .user,
@@ -89,8 +92,11 @@ article h2 {
     margin-bottom: 10px;
 }
 
-.amenities {
+article .amenities,
+article .reviews {
     margin-top: 40px;
+    width: 100%;
+    text-align: left;
 }
 
 .amenities h2 {
@@ -98,19 +104,45 @@ article h2 {
     border-bottom: 1px solid #DDDDDD;
 }
 
-article ul li {
+.amenities ul li {
     list-style: none;
-    background-repeat: no-repeat;
+    margin-top: 10px;
 }
 
-div.tv {
+article .amenities ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.amenities ul .tv {
     background-image: url("../images/icon_tv.png");
+    background-repeat: no-repeat;
+    line-height: 30px;
+    background-size: cover;
+    display: inline-block;
 }
 
-div.pet {
-    background-image: url("../images/icon_pets.png");
-}
-
-div.Wifi {
+.amenities ul .wifi {
     background-image: url("../images/icon_wifi.png");
+    background-repeat: no-repeat;
+    line-height: 30px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.amenities ul .pet {
+    background-image: url("../images/icon_pets.png");
+    background-repeat: no-repeat;
+    line-height: 30px;
+    background-size: cover;
+    display: inline-block;
+}
+
+.reviews h3 {
+    font-size: 14px;
+}
+
+.reviews p {
+    font-size: 12px;
 }
