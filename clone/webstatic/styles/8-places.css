@@ -51,11 +51,16 @@ article h2 {
 .max_guest,
 .number_rooms,
 .number_bathrooms {
-    background-size: cover;
-    background-repeat: none;
+    line-height: 140px;
     width: 100px;
-    margin-right: 20px;
+    height: 100%;
+    display: inline-block;
+    background-position: 50% 5px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    margin: auto;
 }
+
 
 .max_guest {
     background-image: url("../images/icon_group.png");
@@ -70,10 +75,16 @@ article h2 {
     background-image: url("../images/icon_bath.png");
 }
 
-
 .user {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 2em;
+    justify-content: space-between;
+}
+
+.user,
+.description {
+
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
