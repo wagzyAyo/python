@@ -10,7 +10,7 @@
 }
 
 .locations,
-.amenities {
+.filter .amenities {
     height: 100%;
     width: 25%;
     margin: auto 20px;

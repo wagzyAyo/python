@@ -113,30 +113,32 @@ article .amenities ul {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    margin: auto;
+}
+
+.amenities ul .tv,
+.amenities ul .wifi,
+.amenities ul .pet {
+    line-height: 40px;
+    width: 50px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left, 5px;
+    display: inline-flex;
+    font-size: 20px;
 }
 
 .amenities ul .tv {
     background-image: url("../images/icon_tv.png");
-    background-repeat: no-repeat;
-    line-height: 30px;
-    background-size: cover;
-    display: inline-block;
 }
 
 .amenities ul .wifi {
     background-image: url("../images/icon_wifi.png");
-    background-repeat: no-repeat;
-    line-height: 30px;
-    background-size: cover;
-    display: inline-block;
 }
 
 .amenities ul .pet {
     background-image: url("../images/icon_pets.png");
-    background-repeat: no-repeat;
-    line-height: 30px;
-    background-size: cover;
-    display: inline-block;
 }
 
 .reviews h3 {
