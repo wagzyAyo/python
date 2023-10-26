@@ -99,7 +99,8 @@ article .reviews {
     text-align: left;
 }
 
-.amenities h2 {
+.amenities h2,
+.reviews h2 {
     font-size: 16px;
     border-bottom: 1px solid #DDDDDD;
 }
@@ -110,6 +111,7 @@ article .reviews {
     display: flex;
     align-items: center;
 }
+
 
 article .amenities ul {
     margin-top: 20px;
@@ -142,6 +144,11 @@ article .amenities ul {
     height: 35px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.reviews ul li {
+    list-style: none;
+    margin-top: 10px;
 }
 
 .reviews h3 {
