@@ -14,7 +14,9 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
+
     session = Session()
+
     data = session.query(City, State).join(State)
 
     for city, state in data.all():
