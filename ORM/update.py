@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Add new state to the db
+update new state to the db
 """
 from model_state import Base, State
 from sqlalchemy import create_engine
