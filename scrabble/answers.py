@@ -42,7 +42,13 @@ words_answers = {
         "reglith",
         "he",
         "tile",
-        "grit"
+        "grit",
+        "light",
+        "hit",
+        "rile",
+        'rig'
+        "gil",
+        "gril"
     },
     "tsboalc": {
         "cobalts",
@@ -72,7 +78,12 @@ words_answers = {
         "sin",
         "gin",
         "in",
-        "sign"
+        "sign",
+        "mug",
+        "sum",
+        "is",
+        "yin",
+        "gum"
     },
     "renldaw": {
         " wrangled",
@@ -102,7 +113,9 @@ words_answers = {
         "shit",
         "hit",
         "it",
-        "mist"
+        "mist",
+        "hoist",
+        "must"
     },
     "ceblayke": {
         "lackey",
@@ -112,7 +125,10 @@ words_answers = {
         "clay",
         "black",
         "cable",
-        "cakey"
+        "cakey",
+        "lab",
+        "bay",
+        "bee"
     },
     "dnuwlera": {
         "underlaw",
