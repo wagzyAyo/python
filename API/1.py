@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This module request data from 
+"""This module request data from
 jsonplaceholder"""
 import requests
 import sys
+import csv
 
 
 if __name__ == '__main__':
