@@ -2,12 +2,14 @@ from flask import Flask
 from os import getenv
 from flask_cors import CORS
 from views import app_views
+from views import helloworld_bp
 
 app = Flask(__name__)
-app.register_blueprint(app_views, url_prefix='/api/v1')
+CORS(app)
+app.register_blueprint(blueprint=app_views)
+app.register_blueprint(blueprint=helloworld_bp)
 host = getenv('HBNB_API_HOST')
 port = getenv('HBNB_API_PORT')
-cors = CORS(app=app, resources={r"/*": {"origins": "0.0.0.0"}})
 
 @app.route('/')
 def home():
