@@ -108,5 +108,20 @@ class linkedlist:
             return
         else:
             current_node.next = current_node.next.next
-            
-        
+
+    def printNode(self):
+        current_node = self.head
+        while current_node != None:
+            print(current_node.data)
+            current_node = current_node.next
+
+    def nodeSize(self):
+        size = 0
+        if self.head:
+            current_node = self.head
+            while(current_node):
+                size+= 1
+                current_node = current_node.next
+            return size
+        else:
+            return 0
