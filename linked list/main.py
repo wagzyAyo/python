@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
-class linkedlist:
+class LinkedList:
     def __init__(self):
         self.head = None
     
@@ -125,3 +125,38 @@ class linkedlist:
             return size
         else:
             return 0
+        
+
+# create a new linked list
+llist = LinkedList()
+ 
+# add nodes to the linked list
+llist.insertAtend('a')
+llist.insertAtend('b')
+llist.insertAtBegin('c')
+llist.insertAtend('d')
+llist.insertAtIndex('g', 2)
+ 
+# print the linked list
+print("Node Data")
+llist.printNode()
+ 
+# remove a nodes from the linked list
+print("\nRemove First Node")
+llist.removeFirstNode()
+print("Remove Last Node")
+llist.removeLastNode()
+print("Remove Node at Index 1")
+llist.removeNodeAtIndex(1)
+ 
+ 
+# print the linked list again
+print("\nLinked list after removing a node:")
+llist.printNode()
+ 
+print("\nUpdate node Value")
+llist.updateNode('z', 0)
+llist.printNode()
+ 
+print("\nSize of linked list :", end=" ")
+print(llist.nodeSize())
