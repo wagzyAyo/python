@@ -94,3 +94,19 @@ class linkedlist:
                 current_node.next = current_node.next.next
             else:
                 print('Index not present')
+
+    def removeNode(self, data):
+        current_node = self.head
+        if current_node.data == data:
+            self.removeFirstNode()
+            return
+        
+        while current_node != None and current_node.next.data == data:
+            current_node = current_node.next
+
+        if current_node != None:
+            return
+        else:
+            current_node.next = current_node.next.next
+            
+        
