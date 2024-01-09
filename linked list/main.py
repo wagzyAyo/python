@@ -3,6 +3,11 @@ class Node:
         self.data = data
         self.next = None
 
+class linkedlist:
+    def __init__(self):
+        self.head = None
+    
+
     def insertAtBegin(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -28,3 +33,15 @@ class Node:
                     current_node.next = new_node
                 else:
                     print('Index not present')
+
+    def insertAtend(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        
+        current_node = self.head
+        while (current_node.next):
+            current_node = current_node.next
+
+        current_node.next = new_node
