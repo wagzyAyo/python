@@ -60,3 +60,19 @@ class linkedlist:
                     current_node.data = val
                 else:
                     print("Index not present")
+
+    def removeFirstNode(self):
+        if (self.head == None):
+            return
+        
+        self.head = self.head.next
+
+    def removeLastNode(self):
+        if (self.head == None):
+            return
+        
+        current_node = self.head
+        while(current_node.next.next):
+            current_node = current_node.next
+        
+        current_node.next = None
